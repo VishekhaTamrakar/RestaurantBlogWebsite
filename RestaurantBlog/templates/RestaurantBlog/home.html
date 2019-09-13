@@ -1,0 +1,72 @@
+{% extends 'RestaurantBlog/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<br>
+<br>
+<body style=background-image:url("https://www.mccain.com/media/2556/mccain-fries-and-appetizers.jpg")>
+            {% if user.is_authenticated %}
+                <div class="page-container" align="center">
+<br>
+                    <br>
+                    <h1 class="top-menu" style="color:firebrick" align="right"><B>Hello {{ user.username }},</B></h1>
+
+<br>
+                    <br>
+
+                </div>
+            {% endif %}
+            <div class="content container" align="center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="links">
+                            <!-- Example row of columns -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/Unknown.png" %}" alt="Unknown"/>
+                                        <div class="caption">
+                                            <h2>Restaurants</h2>
+                                            <p>Restaurant Details </p>
+                                            <p><a class="btn btn-primary" href="{% url 'RestaurantBlog:restaurant_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/food.jpg" %}" alt="food"/>
+                                        <div class="caption">
+                                            <h2>Food</h2>
+                                            <p>Food Details</p>
+                                            <p><a class="btn btn-primary" href="{% url 'RestaurantBlog:dish_list'%}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+<div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/review.png" %}" alt="review"/>
+                                        <div class="caption">
+                                            <h2>Reviews</h2>
+                                            <p>Restaurant Ratings available here</p>
+                                            <p><a class="btn btn-primary" href="{% url 'RestaurantBlog:review_list'%}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </body>
+
+
+{% endblock %}

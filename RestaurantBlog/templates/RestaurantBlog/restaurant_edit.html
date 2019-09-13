@@ -1,0 +1,29 @@
+{% load crispy_forms_tags %}
+{% block content %}
+    <style>
+        body {
+            background-color: ghostwhite ;
+            background-image: url("https://www.mccain.com/media/2556/mccain-fries-and-appetizers.jpg") ;
+        }
+    </style>
+    <div class="row" style="background-color:white">
+        <h2  style="padding-left:15Px" align="center" ><b><i> { Edit Restaurant Information }</b></i></h2>
+    </div>
+
+ <style>
+        body {
+
+            font-style: italic;
+            color: indianred;
+            font-size: x-large;
+            alignment: center;
+
+        }
+    </style>
+<br><br>
+<div class="row"  align="center">
+    <h2><form method="POST" class="customer-form" > {% csrf_token %}
+        {{ form|crispy }}<br>
+        <button type="submit" class="save btn btn-default" style="background-color: white"><h2>Update</h2></button><br>
+    </form></h2></div>
+{% endblock %}
