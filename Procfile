@@ -1,1 +1,1 @@
-web: gunicorn allthingsyummy.wsgi --log-file -
+web: gunicorn allthingsyummy.wsgi --log-file –
