@@ -2,7 +2,7 @@ from django.conf.urls import url
 from . import views
 from django.urls import path,re_path
 from . import views as RestaurantBlog_views
-
+from django.contrib.auth import views as auth_views
 app_name = 'RestaurantBlog'
 urlpatterns = [
 
@@ -21,4 +21,7 @@ urlpatterns = [
     path('review/<int:pk>/edit/', views.review_edit, name='review_edit'),
     path('review/<int:pk>/delete/', views.review_delete, name='review_delete'),
     url(r'^signup/$', RestaurantBlog_views.signup, name='signup'),
+
+
+
 ]

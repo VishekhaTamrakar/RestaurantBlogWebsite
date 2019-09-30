@@ -154,6 +154,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/home'
 LOGOUT_REDIRECT_URL = '/home'
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'VishekhaUNO@gmail.com'
+EMAIL_HOST_PASSWORD = 'Vishekha@123*'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 try:
     from .local_settings import *
 except ImportError:

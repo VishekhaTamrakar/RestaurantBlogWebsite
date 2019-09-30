@@ -1,23 +1,40 @@
 {% extends 'RestaurantBlog/base.html' %}
 
 {% block content %}
-<body style="background-color:lavenderblush;">
-  <h1>Sign up</h1>
+<body style=background-image:url("https://images5.alphacoders.com/653/thumb-1920-653322.jpg")>
+<br>
+<br>
+<br>
+<br>
+<div class="container" >
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-primary">
 
-  <BR>
-  <br>
-  <br>
-  <br>
+                    <div class="panel-body" style="color: firebrick">
+                      <h1 style="alignment: center">Sign up</h1><br>
+                         <form method="post" style="background-color: white ">
 
-  <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Sign up</button>
+
   </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 <BR>
 <BR>
 <BR>
 <BR>
 <BR>
+
+
 {% endblock %}
+
